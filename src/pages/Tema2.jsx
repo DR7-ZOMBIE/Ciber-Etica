@@ -11,6 +11,7 @@ const Tema2 = () => {
       maxWidth="md"
       sx={{
         mt: 10, // margen superior para separar del navbar
+        mb: 10, // margen inferior para separar del footer
         py: 8,
         background: 'linear-gradient(135deg, #f5f7fa, #c3cfe2)',
         borderRadius: 2,

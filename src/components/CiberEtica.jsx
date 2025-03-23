@@ -18,11 +18,11 @@ const CiberEtica = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col pt-20">
+    <div className="min-h-screen flex flex-col">
       {/* Contenedor principal: se expande para empujar el footer hacia abajo */}
       <div className="flex-grow p-4 md:p-8 max-w-4xl mx-auto">
         <h1 className="text-3xl md:text-4xl font-bold text-center mb-8">
-          CiberÉtica como ética aplicada: una introducción
+          Ciberética en la era digital
         </h1>
 
         {/* Sección 1: Introducción */}

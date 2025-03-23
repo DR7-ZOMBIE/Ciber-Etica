@@ -9,7 +9,6 @@ import {
   Drawer, 
   List, 
   ListItem, 
-  ListItemText, 
   Box 
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
@@ -23,9 +22,9 @@ const StyledLink = styled(Link)(({ theme }) => ({
 
 const navItems = [
   { label: "Inicio", to: "/" },
-  { label: "Tema 1", to: "/tema1" },
-  { label: "Tema 2", to: "/tema2" },
-  { label: "CiberÉtica", to: "/ciberetica" },
+  { label: "Ética en la IA", to: "/tema1" },
+  { label: "Ética en la ciberseguridad", to: "/tema2" },
+  { label: "Ciberética", to: "/ciberetica" },
 ];
 
 const Header = () => {
@@ -38,21 +37,33 @@ const Header = () => {
   const drawer = (
     <Box 
       onClick={handleDrawerToggle} 
-      sx={{ textAlign: 'center', p: 2, backgroundColor: "#A2D2FF", height: '100%' }}
+      sx={{ 
+        textAlign: 'center', 
+        p: 2, 
+        backgroundColor: "#A2D2FF", 
+        height: '100%' 
+      }}
     >
       <Typography variant="h6" sx={{ my: 2, color: "#000000" }}>
-        Ética en la IA
+        ética en la IA
       </Typography>
       <List>
         {navItems.map((item) => (
-          <ListItem key={item.label} disablePadding>
-            <ListItemText>
-              <StyledLink to={item.to}>
-                <Button sx={{ width: '100%', textTransform: 'none', color: "#000000" }}>
-                  {item.label}
-                </Button>
-              </StyledLink>
-            </ListItemText>
+          <ListItem key={item.label} disablePadding sx={{ mb: 1 }}>
+            <StyledLink to={item.to}>
+              <Button
+                fullWidth
+                variant="contained"
+                sx={{
+                  textTransform: 'none',
+                  backgroundColor: "#ffffff",
+                  color: "#000000",
+                  '&:hover': { backgroundColor: "#e0e0e0" },
+                }}
+              >
+                {item.label}
+              </Button>
+            </StyledLink>
           </ListItem>
         ))}
       </List>
@@ -77,7 +88,7 @@ const Header = () => {
           
           {/* Título */}
           <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: "#000000" }}>
-            Ética en la IA
+            Ética en la IA & Ciberseguridad
           </Typography>
           
           {/* Menú para desktop */}
