@@ -45,7 +45,7 @@ const Header = () => {
       }}
     >
       <Typography variant="h6" sx={{ my: 2, color: "#000000" }}>
-        ética en la IA
+        Ética en la IA & Ciberseguridad
       </Typography>
       <List>
         {navItems.map((item) => (

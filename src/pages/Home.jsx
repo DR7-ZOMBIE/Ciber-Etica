@@ -2,6 +2,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Box, Typography, Button } from '@mui/material';
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
 import mapa from '../assets/images/mapa.png'; // Importa la imagen
 
 const Home = () => {
@@ -13,8 +15,8 @@ const Home = () => {
         component="h1"
         sx={{
           fontWeight: 'bold',
-          mb: { xs: 2, sm: 4 }, // menor margen en móviles
-          fontSize: { xs: '2rem', sm: '3rem' } // ajusta el tamaño de fuente según el viewport
+          mb: { xs: 2, sm: 4 },
+          fontSize: { xs: '2rem', sm: '3rem' }
         }}
       >
         Bienvenidos a ética en la IA & Ciberseguridad
@@ -24,27 +26,28 @@ const Home = () => {
         Explora la influencia de las humanidades en la inteligencia artificial y aprende sobre ciberética de forma interactiva.
       </Typography>
 
-      {/* Mapa Conceptual */}
+      {/* Mapa Conceptual Interactivo */}
       <Box sx={{ display: 'flex', justifyContent: 'center', mb: 6 }}>
-        <img
-          src={mapa}
-          alt="Mapa Conceptual de Ética"
-          style={{
-            maxWidth: '100%',
-            borderRadius: '8px',
-            boxShadow: '0 4px 12px rgba(0,0,0,0.2)'
-          }}
-        />
+        <Zoom>
+          <img
+            src={mapa}
+            alt="Mapa Conceptual de Ética"
+            style={{
+              maxWidth: '100%',
+              borderRadius: '8px',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.2)'
+            }}
+          />
+        </Zoom>
       </Box>
 
-      {/* Botones de navegación */}
       {/* Botones de navegación */}
       <Box
         sx={{
           display: 'flex',
-          flexDirection: { xs: 'column', sm: 'row' }, // en mobile se apilan verticalmente
+          flexDirection: { xs: 'column', sm: 'row' },
           justifyContent: 'center',
-          gap: 2, // reduce el gap en mobile para que se adapten mejor
+          gap: 2,
           alignItems: 'center',
         }}
       >
@@ -88,7 +91,6 @@ const Home = () => {
           Ciberética
         </Button>
       </Box>
-
     </Container>
   );
 };
