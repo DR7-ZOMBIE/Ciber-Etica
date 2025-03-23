@@ -70,7 +70,7 @@ const CiberEtica = () => {
             className="flex justify-between items-center cursor-pointer"
           >
             <h2 className="text-xl md:text-2xl font-semibold">
-              2. La CiberÉtica como ética aplicada entre la ética y la informática
+              2. La Ciberética como ética aplicada entre la ética y la informática
             </h2>
             <span className="text-2xl md:text-3xl font-bold">
               {openSections.seccion2 ? '-' : '+'}
@@ -96,7 +96,7 @@ const CiberEtica = () => {
             className="flex justify-between items-center cursor-pointer"
           >
             <h2 className="text-xl md:text-2xl font-semibold">
-              3. Áreas y subáreas de la CiberÉtica
+              3. Áreas y subáreas de la Ciberética
             </h2>
             <span className="text-2xl md:text-3xl font-bold">
               {openSections.seccion3 ? '-' : '+'}
