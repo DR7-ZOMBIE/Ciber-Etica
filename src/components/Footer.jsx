@@ -1,16 +1,18 @@
 // src/components/Footer.jsx
 import React from 'react';
-import { Box, Typography } from '@mui/material';
 
-const Footer = () => (
-  <Box sx={{ backgroundColor: "#2E2E2E", color: "#FFFFFF", py: 2, textAlign: 'center', mt: 4 }}>
-    <Typography variant="body2">
-      © {new Date().getFullYear()} Ética en la IA. Todos los derechos reservados.
-    </Typography>
-    <Typography variant="caption">
-      Desarrollado por: Dennis Patrick Juilland Prada y Santiago Alejandro Pino Giraldo
-    </Typography>
-  </Box>
-);
+const Footer = () => {
+  return (
+    <footer className="bg-[#BDE0FE] text-black py-4 text-center">
+      <p className="text-sm">
+        © {new Date().getFullYear()} Ética en la IA. Todos los derechos reservados.
+      </p>
+      <br />
+      <p className="text-sm">
+        Hecho con ❤️ por el equipo: Dennis Patrick Juilland Prada &amp; Santiago Alejandro Pino Giraldo.
+      </p>
+    </footer>
+  );
+};
 
 export default Footer;

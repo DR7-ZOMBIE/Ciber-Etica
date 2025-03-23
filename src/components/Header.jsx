@@ -36,8 +36,11 @@ const Header = () => {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', p: 2 }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
+    <Box 
+      onClick={handleDrawerToggle} 
+      sx={{ textAlign: 'center', p: 2, backgroundColor: "#A2D2FF", height: '100%' }}
+    >
+      <Typography variant="h6" sx={{ my: 2, color: "#000000" }}>
         Ética en la IA
       </Typography>
       <List>
@@ -45,7 +48,9 @@ const Header = () => {
           <ListItem key={item.label} disablePadding>
             <ListItemText>
               <StyledLink to={item.to}>
-                <Button sx={{ width: '100%', textTransform: 'none' }}>{item.label}</Button>
+                <Button sx={{ width: '100%', textTransform: 'none', color: "#000000" }}>
+                  {item.label}
+                </Button>
               </StyledLink>
             </ListItemText>
           </ListItem>
@@ -56,7 +61,8 @@ const Header = () => {
 
   return (
     <>
-      <AppBar position="static" sx={{ backgroundColor: "#2E2E2E" }}>
+      {/* Navbar pastel con texto en negro */}
+      <AppBar position="fixed" sx={{ backgroundColor: "#A2D2FF" }}>
         <Toolbar>
           {/* Botón de menú para mobile */}
           <IconButton
@@ -64,18 +70,21 @@ const Header = () => {
             aria-label="abrir menú"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { md: 'none' } }}
+            sx={{ mr: 2, display: { md: 'none' }, color: "#000000" }}
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          
+          {/* Título */}
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: "#000000" }}>
             Ética en la IA
           </Typography>
+          
           {/* Menú para desktop */}
           <Box sx={{ display: { xs: 'none', md: 'block' } }}>
             {navItems.map((item) => (
               <StyledLink key={item.label} to={item.to}>
-                <Button sx={{ color: "#FFFFFF", textTransform: 'none', mx: 1 }}>
+                <Button sx={{ color: "#000000", textTransform: 'none', mx: 1 }}>
                   {item.label}
                 </Button>
               </StyledLink>
@@ -83,6 +92,7 @@ const Header = () => {
           </Box>
         </Toolbar>
       </AppBar>
+      
       {/* Drawer para mobile */}
       <Drawer
         variant="temporary"
